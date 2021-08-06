@@ -1,0 +1,27 @@
+- git init - initialises a git repo in the current directory
+- git init --bare - initialises a bare repo (where the repo acts as a database and not as a part of the codebase/workflow)
+- git add . - adds all the files in the current directory to the staging area (git add <file> - adds only that file)
+- git add -p <file> - lets the user perform certain operations like splitting the staging
+- git commit -m ' ' - commits the staged files
+- git branch - displays all the available branches
+- git branch -vv - more verbose
+- HEAD=> - pointer to indicate the working branch
+- git checkout <branch name> - checks out to the specified branch
+- git checkout <commit id> - checks out to that particular commit instance
+- git checkout -b <branch name> - creates a new branch on that name and checks out to that branch
+- git merge <branch name> - merges the current branch and the branch mentioned (git merge -f <branch name> - performs a forced merge)
+- git log --all --graph --decorate - provides a graph of all the commits and branches starting from root
+- git log --all --graph --decorate --oneline - provides a more compact version of the above command
+- git status - provides the status of the files in the directory
+- git remote - lists all the available remote sources
+- git remote add origin <url> - adds a remote repo to the current workflow tree
+- git push origin <local branch> : <remote branch> - pushes all the staged/commited changes up to the remote repo (creates a remote branch if not present)
+- git clone <url> <folder name> - clones everything from the remote to the local repo ([creates a folder if not one] or [clones into current folder if nothing specified])
+- git clone <url> --shallow - only clones the most recent snapshot
+- git branch --set-upstream-to=<branch name on remote> - sets a constant hook between branches on local and remote => followed by just 'git push'
+- git fetch <remote> (none if there's only one remote) - fetches the most recent changes from remote on to the working tree => followed by 'git merge' to merge the changes. Instead we can use,
+- git pull <remote> - fetches and merges the most recent changes on to the current local repo
+- git blame <file> - lists all the commits performed on the file
+- git show <commit id> - provides a complete history on the commit id
+- git stash - stashes the non-commited changes in an isolated env and updates the file to the recent commit performed
+-  git stash pop - pops the stash and updates the file to the changes made
